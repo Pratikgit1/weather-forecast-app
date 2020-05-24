@@ -18,9 +18,9 @@ const Accordion = (props) => {
                  {props.content}
             </section>
         }
-        <section className="small">
+        {/* <section className="small">
                  {props.content}
-            </section>
+            </section> */}
         </div>
     );
 };

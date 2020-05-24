@@ -10,7 +10,7 @@
         display: initial;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         .big {
             display: initial;
         }
@@ -19,3 +19,9 @@
         }
     }
 }
+
+@media (min-width: 769px) {
+        .accordion {
+            margin: 1rem;
+        }
+    }
