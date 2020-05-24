@@ -6,8 +6,19 @@
                 overflow: auto;
                 margin: 1rem;
             }
+        .home-heading {
+            padding: 2rem 3rem;
+            &>span {
+                font-size: 36px;
+            }
+        }
     }
-
+    .hourly-metrics {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2.5rem 0 0.5rem 0;
+    }
     &-heading {
         display: flex;
         justify-content: space-between;
@@ -39,6 +50,9 @@
             font-weight: 500;
             font-size: 21px;
             align-items: center;
+            &.smaller {
+                font-size: 1rem;
+            }
         }
         &-footer {
             display: flex;

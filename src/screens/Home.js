@@ -12,7 +12,7 @@ const Home = () => {
     const [results, setResults] = useState([]);
     const [data,setData] = useState([]);
     const [dataGroupedByDate, setDataGroupedByDate] = useState();
-    const [dates, setDates] = useState()
+    const [dates, setDates] = useState();
 
     const places = [
       {"city":{"id":1283240,"name":"Kathmandu","country":"NP","coord":{"lon":85.316666,"lat":27.716667}},"time":1489465075,"data":[{"dt":1489471200,"temp":{"day":286.84,"min":269.81,"max":286.84,"night":269.81,"eve":278.25,"morn":286.15},"pressure":708.98,"humidity":65,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.4,"deg":212,"clouds":8,"rain":0.96,"snow":0.2,"uvi":8.37},{"dt":1489557600,"temp":{"day":278.34,"min":270.01,"max":279.27,"night":271.76,"eve":276.5,"morn":270.01},"pressure":709.79,"humidity":58,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":0.29,"deg":193,"clouds":0,"snow":0,"uvi":8.33},{"dt":1489644000,"temp":{"day":278.23,"min":270.22,"max":278.23,"night":272.41,"eve":274.27,"morn":270.22},"pressure":707.85,"humidity":57,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.53,"deg":179,"clouds":36,"rain":2.59,"snow":1.01,"uvi":8.69},{"dt":1489730400,"temp":{"day":283.83,"min":276.06,"max":283.83,"night":276.06,"eve":279.1,"morn":276.38},"pressure":787.6,"humidity":0,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"speed":0.83,"deg":215,"clouds":17,"rain":9.8,"snow":4.18,"uvi":7.68},{"dt":1489816800,"temp":{"day":283.37,"min":272.76,"max":283.37,"night":276.06,"eve":280.5,"morn":272.76},"pressure":788.48,"humidity":0,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.74,"deg":201,"clouds":17,"rain":2.2,"snow":1.35,"uvi":7.49},{"dt":1489903200,"temp":{"day":284.95,"min":274.89,"max":284.95,"night":274.95,"eve":281.87,"morn":274.89},"pressure":790,"humidity":0,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"speed":0.69,"deg":205,"clouds":41,"rain":2.05,"snow":2.05,"uvi":8.3},{"dt":1489989600,"temp":{"day":283.35,"min":272.73,"max":283.35,"night":273.35,"eve":281.32,"morn":272.73},"pressure":790.08,"humidity":0,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.85,"deg":240,"clouds":26,"rain":1.97,"snow":1.35,"uvi":9.3},{"dt":1490076000,"temp":{"day":287.06,"min":271.35,"max":287.06,"night":274.74,"eve":285.12,"morn":271.35},"pressure":790.94,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":0.5,"deg":291,"clouds":0,"uvi":9.3},{"dt":1490162400,"temp":{"day":287.84,"min":273.87,"max":287.84,"night":276.31,"eve":286.25,"morn":273.87},"pressure":790.56,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":0.65,"deg":262,"clouds":0,"snow":0.01,"uvi":9.3},{"dt":1490248800,"temp":{"day":289.08,"min":273.25,"max":289.08,"night":278.02,"eve":288.06,"morn":273.25},"pressure":789.54,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":0.58,"deg":271,"clouds":0,"rain":0.2,"uvi":9.3},{"dt":1490335200,"temp":{"day":290.51,"min":276,"max":290.51,"night":279.46,"eve":288.44,"morn":276},"pressure":790.5,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":0.6,"deg":251,"clouds":0,"rain":0.31,"uvi":9.3},{"dt":1490421600,"temp":{"day":290.91,"min":277.51,"max":290.91,"night":278.02,"eve":287.6,"morn":277.51},"pressure":790.91,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":0.72,"deg":262,"clouds":1,"snow":0.03,"uvi":9.3},{"dt":1490508000,"temp":{"day":290.32,"min":278.79,"max":290.32,"night":281.03,"eve":287.87,"morn":278.79},"pressure":790.04,"humidity":0,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.63,"deg":148,"clouds":28,"snow":0.11,"uvi":9.3},{"dt":1490594400,"temp":{"day":288.95,"min":279.25,"max":288.95,"night":280.36,"eve":284.65,"morn":279.25},"pressure":791.55,"humidity":0,"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"speed":0.6,"deg":168,"clouds":67,"rain":3.66,"snow":1.25,"uvi":9.3},{"dt":1490680800,"temp":{"day":285.5,"min":278.1,"max":285.5,"night":278.1,"eve":281.73,"morn":279.04},"pressure":792.56,"humidity":0,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"speed":0.82,"deg":186,"clouds":42,"rain":8.4,"snow":1.89,"uvi":9.3},{"dt":1490767200,"temp":{"day":274.7,"min":274.7,"max":274.7,"night":274.7,"eve":274.7,"morn":274.7},"pressure":789.81,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":0.78,"deg":43,"clouds":8,"snow":0.01,"uvi":9.3}]},
@@ -79,7 +79,7 @@ const Home = () => {
     <div className="title">
         <div className="title-date-day-group">
           <div>{getDay(data.dt)}</div>
-          <div  className="title-date">{`${dateSplit[2]} / ${dateSplit[1]}`}</div>
+          <div className="title-date">{`${dateSplit[2]} / ${dateSplit[1]}`}</div>
         </div>
         <div className="title-first">
           {convertToCelcius(data.main.temp)} &deg;C 
@@ -90,43 +90,64 @@ const Home = () => {
         <div>
         <div>Feels like {convertToCelcius(data.main.feels_like)} &deg;C &#5867; Humidity {data.main.humidity} %</div>
         </div>
-        <div>More...</div>
+    <div>Details</div>
       </div>
       </>
     }
 
     const getContent = (date) => {
       const data = dataGroupedByDate[date];
-      return data.map(i => (<div>
-        <hr/>
-        <div>
-          {i.dt_txt}
-      </div>
-      <div>
-        
-            <div>{convertToCelcius(i.main.temp_min)} &deg;C / {convertToCelcius(i.main.temp_max)} &deg;C </div>
-
-        </div>
-
-      <div>
-      Humidity {i.main.humidity} % | 
-          {/* {i.weather[0].main} */}
-          <img src={`http://openweathermap.org/img/wn/${i.weather[0].icon}.png`}/>
-      </div>
-        </div>) )
+      return data.map(i => {
+        const dateSplit = i.dt_txt.split(" ")[1].split(":");
+        return (
+          <div key={i.dt}>
+            <div className="hourly-metrics">
+              <div className="title-date">
+              {`${dateSplit[0]}:${dateSplit[1]}`}
+              </div>
+              <div className="title-first smaller">
+                {convertToCelcius(i.main.temp_min)} &deg;C / {convertToCelcius(i.main.temp_max)} &deg;C
+                <img src={`http://openweathermap.org/img/wn/${i.weather[0].icon}.png`} alt={i.weather[0].description} />
+              </div>
+            </div>
+            <div className="title-footer">
+              <div>
+              <div>
+                {i.weather[0].main}
+                </div>
+                <div>
+                  Feels like {convertToCelcius(i.main.feels_like)} &deg;C
+                </div>
+                <div>
+                  Humidity {i.main.humidity} %
+                </div>
+                <div>
+                  Wind speed {_.round(i.wind.speed * 3.6, 1)} kmph at {i.wind.deg}&deg;
+                </div>
+                {
+                  i.rain && <div>
+                  Rainfall last 3 hours {i.rain["3h"]} mm
+                </div>
+                }
+                <div>
+                  Pressure {i.main.pressure} hPa
+                </div>
+              </div>
+            </div>
+        </div>) 
+      });
     }
 
     const getDay = (timestamp) => {
       const a = new Date(timestamp*1000);
       const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-      // console.log(data.filter(x => x.dt_txt.includes('2020-05-24')))
       return days[a.getDay()]
     }
 
    return(
     <section className="home">
-      <div class="home-heading">
-        Weather forecast
+      <div className="home-heading">
+        <span>Weather forecast</span>
         <Search
         onSearchChange={_.debounce(handleSearchChange, 500, {
           leading: true,
@@ -139,7 +160,6 @@ const Home = () => {
       <div className="data-area">
       {
         dataGroupedByDate && dates ? dates.map((i) => {
-          console.log(dataGroupedByDate)
           return <Accordion 
           key={i}
           title={getTitle(i)}
@@ -149,7 +169,6 @@ const Home = () => {
         'No data'
       }
       </div>
-
     </section>
    )
 }

@@ -9,7 +9,7 @@ const Accordion = (props) => {
     }
 
     return (
-        <div key={props.key} className="accordion">
+        <div className="accordion">
         <section onClick={handleToggle}>
             {props.title}
             </section>
