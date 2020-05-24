@@ -84,6 +84,7 @@ const Home = () => {
           onResultSelect={handleResultSelect}
           results={results}
           defaultValue={value}
+          aligned={'right'}
         />
       </div>
       <div className="data-area">
