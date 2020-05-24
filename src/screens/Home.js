@@ -73,23 +73,25 @@ const Home = () => {
 
     const getTitle = (date) => {
     const data = dataGroupedByDate[date][0];
-    return <div className="title">
-      <div>
-        <div>{getDay(data.dt)}</div>
-        <div>23/05</div>
-        <div>12 PM</div>
-      </div>
-      <div>
-        
-            <div>{convertToCelcius(data.main.temp)} &deg;C </div>
-            </div>
-
-      <div>
-      Humidity {data.main.humidity} % | 
-          {/* {data.weather[0].main} */}
+    const dateSplit = data.dt_txt.split(" ")[0].split("-");
+    return <>
+    <div className="title">
+        <div >
+          <div>{getDay(data.dt)}</div>
+          <div>{`${dateSplit[2]} / ${dateSplit[1]}`}</div>
+        </div>
+        <div className="title-first">
+          {convertToCelcius(data.main.temp)} &deg;C 
           <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}/>
+        </div>
       </div>
+      <div className="title-footer">
+        <div>
+        <div>Feels like {convertToCelcius(data.main.feels_like)} &deg;C &#5867; Humidity {data.main.humidity} %</div>
+        </div>
+        <div>More...</div>
       </div>
+      </>
     }
 
     const getContent = (date) => {
@@ -122,12 +124,9 @@ const Home = () => {
 
    return(
     <section className="home">
-      <div>
+      <div class="home-heading">
         Weather forecast
-        {/* <Flag name='ae' /> */}
-      </div>
-
-      <Search
+        <Search
         onSearchChange={_.debounce(handleSearchChange, 500, {
           leading: true,
         })}
@@ -135,7 +134,8 @@ const Home = () => {
         results={results}
         defaultValue={value}
       />
-      <div>
+      </div>
+      <div className="data-area">
       {
         dataGroupedByDate && dates ? dates.map((i) => {
           console.log(dataGroupedByDate)
