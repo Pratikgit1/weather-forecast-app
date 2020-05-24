@@ -26,6 +26,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        &-date-day-group {
+            min-width: 50px;
+        }
+        &-date {
+            color: #ec6e4c;
+        }
         &-first {
             display: flex;
             justify-content: flex-end;
