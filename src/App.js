@@ -1,6 +1,6 @@
-import React from 'react';
-import Home from './screens/Home';
-import './App.scss';
+import React from "react";
+import Home from "./screens/Home";
+import "./App.scss";
 
 function App() {
   return (
