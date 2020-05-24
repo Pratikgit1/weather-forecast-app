@@ -14,6 +14,7 @@
     @media (max-width: 768px) {
         .big {
             display: initial;
+            animation: drop 0.5s ease-in;
         }
         .small {
             display: none;
