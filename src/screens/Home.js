@@ -85,6 +85,7 @@ const Home = () => {
           results={results}
           defaultValue={value}
           aligned={'right'}
+          data-testid='test-search'
         />
       </div>
       <div className="data-area">

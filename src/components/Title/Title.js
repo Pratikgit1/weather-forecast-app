@@ -8,7 +8,7 @@ const Title = (props) => {
 
   return (
     <>
-      <div className="title" key={data.dt}>
+      <div className="title" key={data.dt} data-testid="test-title-main">
         <div className="title-date-day-group">
           <div>{getDay(data.dt)}</div>
           <div className="title-date">{`${dateSplit[2]} / ${dateSplit[1]}`}</div>
@@ -17,10 +17,11 @@ const Title = (props) => {
           {convertToCelcius(data.main.temp)} &deg;C
           <img
             src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+            alt={data.weather[0].description}
           />
         </div>
       </div>
-      <div className="title-footer">
+      <div className="title-footer" data-testid="test-title-footer">
         <div>
           <div>
             Feels like {convertToCelcius(data.main.feels_like)} &deg;C &#5867;

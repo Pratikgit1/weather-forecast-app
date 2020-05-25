@@ -7,7 +7,7 @@ const Content = (props) => {
   const dateSplit = data.dt_txt.split(" ")[1].split(":");
 
   return (
-    <div className="content" key={data.dt}>
+    <div className="content" key={data.dt} data-testid="test-content">
       <div className="hourly-metrics">
         <div className="title-date">{`${dateSplit[0]}:${dateSplit[1]}`}</div>
         <div className="title-first smaller">
